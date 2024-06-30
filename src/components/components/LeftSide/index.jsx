@@ -158,7 +158,7 @@ const LeftSide = () => {
                 <Link href="mailbox.html" className="link" data-bs-toggle="tooltip" title="Email">
                     <span className="icon-Mail"></span>
                 </Link>
-                <Link href="javascript:void(0)" className="link" data-bs-toggle="tooltip" title="Logout" onClick={() => { localStorage.clear() }}>
+                <Link href="/" className="link" data-bs-toggle="tooltip" title="Logout" onClick={() => { if(localStorage.clear()){ history.pushState('/')} }}>
                     <span className="icon-Lock-overturning">
                         <span className="path1"></span>
                         <span className="path2"></span>
