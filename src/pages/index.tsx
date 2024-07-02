@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState, useEffect, FormEvent } from "react";
 import { useRouter } from "next/router";
 import axios from 'axios';
-import md5 from 'md5-hash'
+import md5 from 'md5'
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
