@@ -112,7 +112,6 @@ const LoginForm = () => {
         },
         body: JSON.stringify({ email, password }),
       });
-
       const data = await res.json();
       if (data.success) {
         localStorage.setItem("usersData", JSON.stringify(data));
