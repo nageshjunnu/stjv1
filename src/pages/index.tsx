@@ -79,7 +79,7 @@ const LoginForm = () => {
       const userCheckRes = await fetch(`https://kyroes.in/st-josephs/api/users/user/${email}`);
       const userCheckData = await userCheckRes.json();
 
-      if (userCheckData.status === 'success') {
+      if (userCheckData.status === "success") {
         const hashedPassword = password;
         if (userCheckData.data.password === hashedPassword) {
           localStorage.setItem("usersData", JSON.stringify(userCheckData));
