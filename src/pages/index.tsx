@@ -2,11 +2,12 @@ import Head from "next/head";
 import { useState, useEffect, FormEvent } from "react";
 import { useRouter } from "next/router";
 import axios from 'axios';
+import md5 from 'md5-hash'
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');f
+  const [error, setError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [passwordRecovery, setPasswordRecovery] = useState(false);
