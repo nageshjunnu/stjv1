@@ -6,7 +6,7 @@ import axios from 'axios';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState('');f
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [passwordRecovery, setPasswordRecovery] = useState(false);
@@ -80,7 +80,7 @@ const LoginForm = () => {
       const userCheckData = await userCheckRes.json();
 
       if (userCheckData.status === "success") {
-        const hashedPassword = password;
+        const hashedPassword = md5(password);
         if (userCheckData.data.password === hashedPassword) {
           localStorage.setItem("usersData", JSON.stringify(userCheckData));
           localStorage.setItem("studentId", userCheckData.data.student_id);
